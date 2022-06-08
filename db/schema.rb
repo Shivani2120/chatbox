@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_20_054432) do
+ActiveRecord::Schema.define(version: 2022_06_08_123104) do
 
   create_table "accountes", force: :cascade do |t|
     t.integer "employee_id"
@@ -38,6 +38,12 @@ ActiveRecord::Schema.define(version: 2022_05_20_054432) do
     t.text "description"
     t.string "address"
     t.integer "review_count"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
