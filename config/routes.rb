@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'landing/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
 
@@ -19,6 +20,13 @@ Rails.application.routes.draw do
       resources :reviews
    end   
    
-   root "users#index"
+   get 'landing/index'
+   
+   root "landing#index"
+   
+   # root "users#index"
+
+   resources :messages, only: [:new, :create]
+
 
 end
